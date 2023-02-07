@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Soundboard | lioxryt</title>
+  </head>
+  <body>
+    <script>
+      var audioObjects = [];
+      var currentSpeed = 1;
+    </script>
+      <button id="playAllButton" class="button">Chaos</button>
+      <button id="stopAllButton" onclick="stopAll()">Stop all</button>
+      <input type="range" min="0.5" max="2" value="1" step="0.01" id="speedSlider">
+      <span id="speedValue"></span>
+          <script>
+      function playAll() {
+        playFart();
+        playFartRe();
+        playSlopFart();
+        playTaco();
+        playVine();
+        playCs();
+        playCrace();
+        playCc();
+        playCsl();
+        playCra();
+        playGent();
+        playPlscoc();
+        playNi();
+        playWa();
+        playLa();
+        playLil();
+        playYgae();
+        playUgae();
+        playXue();
+        playCoc();
+        playCr();
+        playSpice();
+        playPh();
+        playGup();
+        playBing();
+        playCms();
+        playMc();
+        playNeani();
+        playWweut();
+      }
+      document.getElementById("playAllButton").onclick = playAll;
+    </script>
+    <script>
+      function stopAll() {
+        audioObjects.forEach(function(audioObject) {
+        audioObject.pause();
+       });
+      }
+    </script>
+    <script>
+      document.getElementById("speedSlider").addEventListener("input", function() {
+        currentSpeed = this.value;
+        updateSpeed();
+      });
+      function updateSpeed() {
+        audioObjects.forEach(function(audioObject) {
+          audioObject.playbackRate = currentSpeed;
+        });
+        document.getElementById("speedValue").innerHTML = currentSpeed;
+      }
+    </script>
+    <h1>Soundboard</h1>
+    <h2>
+      Just click a button<br />
+      <a href="https://forms.gle/Afv8gmvbDm4cEUqr5"
+        >Click here to recommend a sound</a
+      >
+    </h2>
+    <h3 id="section">Some Goofs</h3>
+    <div class="flex-container">
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #339900"
+          ></div>
+          <script>
+            function playFart() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/fart.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playFart()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/fart.mp3'"
+            >
+              Download</button
+            ><br />
+            Fart
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #694729"
+          ></div>
+          <script>
+            function playFartRe() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/fart-with-reverb.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playFartRe()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              onclick="window.location.href='sounds/fart-with-reverb.mp3'"
+            >
+              Download</button
+            ><br />
+            Fart with reverb<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #d000ff"
+          ></div>
+          <script>
+            function playSlopFart() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/sloppy-fart.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playSlopFart()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button onclick="window.location.href='sounds/sloppy-fart.mp3'">
+              Download</button
+            ><br />
+            Sloppy Fart<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #702082"
+          ></div>
+          <script>
+            function playTaco() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/taco-bell.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playTaco()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/taco-bell.mp3'"
+            >
+              Download</button
+            ><br />
+            Taco Bell!<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #9ff1ff"
+          ></div>
+          <script>
+            function playVine() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/vine.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playVine()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button onclick="window.location.href='sounds/vine.mp3'">
+              Download</button
+            ><br />
+            Vine Boom<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #00842a"
+          ></div>
+          <script>
+            function playCs() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/csneak.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCs()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button onclick="window.location.href='sounds/csneak.mp3'">
+              Download</button
+            ><br />
+            Cartoon Sneak<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #afa1ff"
+          ></div>
+          <script>
+            function playCrace() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/crace.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCrace()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button onclick="window.location.href='sounds/crace.mp3'">
+              Download</button
+            ><br />
+            Cartoon Race Start<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #00594a"
+          ></div>
+          <script>
+            function playCc() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/ccrash.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCc()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/ccrash.mp3'"
+            >
+              Download</button
+            ><br />
+            Cartoon Crash<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #7700ff"
+          ></div>
+          <script>
+            function playCsl() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/cslip.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCsl()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/cslip.mp3'"
+            >
+              Download</button
+            ><br />
+            Cartoon Slip<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #e0c4ff"
+          ></div>
+          <script>
+            function playLa() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/funny-laugh.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playLa()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/funny-laugh.mp3'"
+            >
+              Download</button
+            ><br />
+            Emoji Laugh<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #55ff9f"
+          ></div>
+          <script>
+            function playCra() {
+              var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/crun.mp3");
+              audioObjects.push(audioElement);
+              audioElement.playbackRate = currentSpeed;              
+			  audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCra()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/crun.mp3'"
+            >
+              Download</button
+            ><br />
+            Cartoon Run<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #d4ff00"
+            ></div>
+            <script>
+              function playGent() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/gentleman.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playGent()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/gentleman.mp3'"
+              >
+                Download</button
+              ><br />
+              Gentlemen!
+            </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #336a00"
+            ></div>
+            <script>
+              function playPlscoc() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/plsgivmecoc.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playPlscoc()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/plsgivmecoc.mp3'"
+              >
+                Download</button
+              ><br />
+              Please give me Coc<br />
+            </p>
+         </div>
+      </div>
+       <div>
+        <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ffffff"
+            ></div>
+            <script>
+              function playNi() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/you-stupid-ni.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playNi()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/you-stupid-ni.mp3'"
+              >
+                Download</button
+              ><br />
+              You Stupid Ni
+            </p>
+         </div>
+      </div>
+      <div>
+         <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #383838"
+            ></div>
+            <script>
+              function playLil() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/lbwstahb.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playLil()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/lbwstahb.mp3'"
+              >
+                Download</button
+              ><br />
+              Lil Buddy was sick, Took all his bands
+            </p>
+         </div>
+      </div>
+      <div>
+        <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #f9ff46"
+            ></div>
+            <script>
+              function playWa() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/wawa.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playWa()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/wawa.mp3'"
+              >
+                Download</button
+              ><br />
+              Spongebob Disgusting
+            </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #005661"
+            ></div>
+            <script>
+              function playYgae() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/yrugae.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playYgae()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/yrugae.mp3'"
+              >
+                Download</button
+              ><br />
+              Why are you Gae
+            </p>
+        </div>
+      </div>
+      <div>
+         <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ff0000"
+            ></div>
+            <script>
+              function playUgae() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/urgae.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playUgae()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/urgae.mp3'"
+              >
+                Download</button
+              ><br />
+              You are Gae
+            </p>
+         </div>
+      </div>
+      <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #00a61e"
+            ></div>
+            <script>
+              function playXue() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/xuehua.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playXue()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/xuehua.mp3'"
+              >
+                Download</button
+              ><br />
+              Xue hua piao piao 
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #00114e"
+            ></div>
+            <script>
+              function playCoc() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/coc.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playCoc()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/coc.mp3'"
+              >
+                Download</button
+              ><br />
+              Clash of Clans Intro
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #d0ff01"
+            ></div>
+            <script>
+              function playCr() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/cr.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playCr()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/cr.mp3'"
+              >
+                Download</button
+              ><br />
+              Clash Royale Intro
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ff5d5d"
+            ></div>
+            <script>
+              function playSpice() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/spice.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playSpice()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/spice.mp3'"
+              >
+                Download</button
+              ><br />
+              Old Spice Whistle
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ff6a00"
+            ></div>
+            <script>
+              function playPh() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/ph.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playPh()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/ph.mp3'"
+              >
+                Download</button
+              ><br />
+              Kid-Friendly Content
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ffe9da"
+            ></div>
+            <script>
+              function playBing() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/bingchilling.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playBing()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/bingchilling.mp3'"
+              >
+                Download</button
+              ><br />
+              Bing Chilling
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #6d6d6d"
+            ></div>
+            <script>
+              function playGup() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/gup.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playGup()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/gup.mp3'"
+              >
+                Download</button
+              ><br />
+              The Grow-up Plan
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #61ffc0"
+            ></div>
+            <script>
+              function playCms() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/cms.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playCms()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/cms.mp3'"
+              >
+                Download</button
+              ><br />
+              Monkeys Singing Chinese
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #41ba00"
+            ></div>
+            <script>
+              function playMc() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/mcded.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playMc()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/mcded.mp3'"
+              >
+                Download</button
+              ><br />
+              Minecraft Death
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ff46bb"
+            ></div>
+            <script>
+              function playNeani() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/neani.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playNeani()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/neani.mp3'"
+              >
+                Download</button
+              ><br />
+              Nea Ni Nea Nea Ni Ni
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #007971"
+            ></div>
+            <script>
+              function playWweut() {
+                var currentSpeed = document.getElementById("speedSlider").value;
+              const audioElement = new Audio("sounds/wweut.mp3");
+                audioObjects.push(audioElement);
+                audioElement.playbackRate = currentSpeed;              
+				audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playWweut()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/wweut.mp3'"
+              >
+                Download</button
+              ><br />
+              WWE Undertaker
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- TEMPLATE TO ADD MORE SOUNDS
+
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #COLOR"
+          ></div>
+          <script>
+            function playNAME() {
+            var currentSpeed = document.getElementById("speedSlider").value;
+            const audioElement = new Audio("sounds/SOUND.mp3");
+            audioObjects.push(audioElement);
+            audioElement.playbackRate = currentSpeed;              
+            audioElement.play();
+            }
+          </script>
+          <button
+            class="small-button"
+            onclick="playNAME()"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/SOUND.mp3'"
+            >
+              Download</button
+            ><br />
+            NAME
+          </p>
+        </div>
+      </div>
+      <div>
+
+-->
+    </div>
+  </body>
+</html>
